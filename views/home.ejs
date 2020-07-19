@@ -1,0 +1,17 @@
+<%- include('partials/header'); -%>
+
+<h1>Home!</h1>
+
+<p> <%=startingContent %> </p>
+
+<!-- challange 15 revealed how to add posts -->
+<%newPosts.forEach(function(newPost){%>
+  <h1><%=newPost.title %></h1>
+  <p><%=newPost.content.slice(0,100)+"..."%> 
+    
+    <a href="/posts/<%=newPost.title %>">Read more...</a> 
+</p>
+<%})%>
+ 
+
+ <%- include('partials/footer'); -%>
